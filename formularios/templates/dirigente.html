@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="content">
+        <div class="formulario">
+            <h3 class="title">Encuesta Dirigentes</h3>
+            <form method="post" class="form">
+                {% csrf_token %}
+                {% for error in field.errors %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                {% endfor %}
+                <div class="section-1 see" id="section-1">
+                    <span class="error" id="error-1"></span>
+                {% for field in form %}
+                    {% if forloop.counter == 5 %}
+                        <p tabindex="0" class="next" onclick="move('section-1', 'section-2', 'error-1', 'id_nivelEducativo')">Siguiente</p>
+                        </div>
+                        <div class="section-2" id="section-2">
+                            <span class="error" id="error-2"></span>
+                    {% elif forloop.counter == 7%}
+                        <p tabindex="0" class="next" onclick="move('section-2', 'section-3', 'error-2', 'id_personal1')">Siguiente</p>
+                        </div>
+                        <div class="section-3" id="section-3">
+                            <span class="error" id="error-3"></span>
+                    {% elif forloop.counter == 10%}
+                        <p tabindex="0" class="next" onclick="move('section-3', 'section-4', 'error-3', 'id_personal3')">Siguiente</p>
+                        </div>
+                        <div class="section-4" id="section-4">
+                            <span class="error" id="error-4"></span>
+                    {% elif forloop.counter == 12%}
+                        <p tabindex="0" class="next" onclick="move('section-4', 'section-5', 'error-4', 'id_personal5', 'id_personal6')">Siguiente</p>
+                        </div>
+                        <div class="section-5" id="section-5">
+                            <span class="error" id="error-5"></span>
+                    {% elif forloop.counter == 16%}
+                        <p tabindex="0" class="next" onclick="move('section-5', 'section-6', 'error-5', 'id_pesem3')">Siguiente</p>
+                        </div>
+                        <div class="section-6" id="section-6">
+                            <span class="error" id="error-6"></span>
+                    {% elif forloop.counter == 21%}
+                        <p tabindex="0" class="next" onclick="move('section-6', 'section-7', 'error-6', 'id_solidario2', 'id_solidario4', 'id_solidario5')">Siguiente</p>
+                        </div>
+                        <div class="section-7" id="section-7">
+                            <span class="error" id="error-7"></span>
+                    {% elif forloop.counter == 26%}
+                        <p tabindex="0" class="next" onclick="move('section-7', 'section-8', 'error-7', 'id_coovitel2', 'id_coovitel3')">Siguiente</p>
+                        </div>
+                        <div class="section-8" id="section-8">
+                            <span class="error" id="error-8"></span>
+                    {% endif %}
+                    <div class="question">
+                        {{field.label_tag}}
+                        {{field}}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="next">Enviar</button>
+                </div>
+            </form>       
+        </div>
+    </div>
+
+    <script src="{% static 'js/formularios.js' %}"></script>
+{% endblock content %}
