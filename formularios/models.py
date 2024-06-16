@@ -3,7 +3,7 @@ from django.db import models
 class Asociado(models.Model):
     """"""
     name = models.CharField(max_length=100)
-    cedula = models.IntegerField(unique=True)
+    cedula = models.IntegerField()
     edad = models.IntegerField()
     nivelEducativo = models.CharField(max_length=100)
     familiares = models.CharField(max_length=500)
@@ -45,7 +45,7 @@ class Asociado(models.Model):
 
 class Colaborador(models.Model):
     """"""
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100)
     cargo = models.CharField(max_length=100)
     años = models.IntegerField()
     nivelEducativo = models.CharField(max_length=100)
@@ -83,7 +83,7 @@ class Colaborador(models.Model):
         return f"Registro asociado {self.name} - {self.cargo}"
 
 class Dirigente(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100)
     cargo = models.CharField(max_length=100)
     años = models.IntegerField()
     nivelEducativo = models.CharField(max_length=100)
