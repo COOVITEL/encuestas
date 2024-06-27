@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="cont">
+        <div class="back"></div>
+        <div class="front">
+            <h1>Iniciar Sesión</h1>
+            <h3>Registros PESEM</h3>
+            {% if form.errors %}
+                <p>
+                    Su usuario o contraseña no son correctos.
+                    Intente de nuevo.
+                </p>
+                {% else %}
+                <p>Por favor, ingrese sus credenciales para inicar sesion.</p>
+            {% endif %}
+            
+            <div>
+                <form action="{% url 'login' %}" method="post">
+                    {{ form.as_p }}
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    <p class="login"><input type="submit" value="Iniciar Sesion"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

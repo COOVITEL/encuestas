@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="cont">
+
+        <div class="back"></div>
+        <div class="front">
+            <h1>Sesion Finalizada</h1>
+            <h3>Esperamos tenerte pronto de vuelta, gracias por visitarnos!</h3>
+            <p>
+                Si quieres inciar sesion de nuevo da click en el siguiente boton. 
+            </p>
+            <a class="bt-logout" href="{% url "login" %}">Iniciar Sesión</a>
+        </div>
+    </div>
+{% endblock %}

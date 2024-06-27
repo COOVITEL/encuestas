@@ -1,0 +1,134 @@
+.cont {
+    height: 90vh;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background-image: url("/static/images/logoup.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.front {
+    border: 2px solid #25306c;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: #25306c;
+}
+
+
+.front h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.front a {
+    background-color: #1f2c71;
+    color: #f6f6f6;
+    text-decoration: none;
+}
+
+form p  {
+    display: flex;
+    flex-direction: column;
+}
+
+form p:nth-of-type(3) input {
+    background-color: var(--colorOne);
+    color: var(--colorWhite);
+    transition: all .3s;
+
+}
+
+form p:nth-of-type(3) input:hover {
+    background-color: var(--colorFour);
+    transition: all .3s;
+    transform: scale(1.04);
+}
+
+form p label {
+    text-align: center;
+    margin: 5px;
+    font-weight: 600;
+}
+
+form p input {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1f2c71;
+    border-radius: 20px;
+    color: #f6f6f6;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="submit"] {
+    width: 100%;
+}
+
+.recover {
+    text-align: center;
+}
+
+.recover a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    color: var(--colorLinks);
+}
+
+.recover a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--colorOne);
+    transition: width 0.6s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.recover a:hover::after {
+    width: 100%;
+}
+
+.bt-logout {
+    background-color: var(--colorTwo);
+    padding: 10px 20px;
+    color: var(--colorWhite);
+    border-radius: 25px;
+    transition: all .3s;
+    border: 0;
+}
+
+.bt-logout:hover {
+    transition: all .3s;
+    transform: scale(1.04);
+}

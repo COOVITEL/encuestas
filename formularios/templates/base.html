@@ -10,6 +10,7 @@
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
         <link rel="stylesheet" type="text/css" href="{% static 'css/formularios.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +18,14 @@
     </head>
     <body>
         <header>
-            <img src="/static/images/logo.png" alt="Logo coovitel">
+            <img src="/static/images/LOGOCOOVITEL.png" alt="Logo coovitel">
             <h1>Encuesta PESEM 2024</h1>
         </header>
         <main>
             {% block content %}
             {% endblock content %}
         </main>
-        <footer>
+        {% comment %} <footer>
             <div>
                 <ul class="links">
                     <li>
@@ -49,7 +50,7 @@
                 <p>+57 (1) 5666601</p>
                 <p>Linea Gratuita Nacional: 018000967474</p>
             </div>
-        </footer>
+        </footer> {% endcomment %}
         <script src="" async defer></script>
     </body>
 </html>

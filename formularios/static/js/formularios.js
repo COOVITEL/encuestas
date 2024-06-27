@@ -66,11 +66,7 @@ function move(out, int, error, box1, box2, box3) {
         }
         setTimeout(addMore, 500)   
     } else {
-        console.log(state)
-        console.log(stateBox1)
-        console.log(stateBox2)
-        console.log(stateBox3)
         spanError = document.getElementById(error)
-        spanError.textContent = "Recuerda llenar todos los campos"
+        spanError.textContent = "Recuerda ingresar o seleccionar todos los campos!"
     }
 }

@@ -46,6 +46,7 @@ class Asociado(models.Model):
 class Colaborador(models.Model):
     """"""
     name = models.CharField(max_length=100)
+    cedula = models.IntegerField()
     cargo = models.CharField(max_length=100)
     años = models.IntegerField()
     nivelEducativo = models.CharField(max_length=100)

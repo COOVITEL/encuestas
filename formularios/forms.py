@@ -149,7 +149,7 @@ class AsociadoForm(forms.ModelForm):
             'name': '¿Cuál es su nombre completo?',
             'cedula': '¿Cuál es su cedula?',
             'edad': '¿Cuántos años tiene?',
-            'familiaresDetalles': 'Si su respuesta es, Sí, ¿Quienes?',
+            'familiaresDetalles': 'Si su respuesta es, Sí, ¿Quienes?, Si es no, ingresa No',
             
             'personal1Detalles': '¿Por que?',
             'personal2': '¿Qué habilidades o conocimientos le gustaría adquirir o mejorar en el corto plazo (1-2 años)?',
@@ -245,7 +245,7 @@ class ColaboradorForm(forms.ModelForm):
     class Meta:
         model = Colaborador
         fields = [
-            'name', 'cargo', 'años', 'nivelEducativo',
+            'name', 'cedula', 'cargo', 'años', 'nivelEducativo',
             'personal1', 'personal1Detalles', 'personal2', 'personal3', 'personal4', 'personal5', 'personal6',
             'pesem1', 'pesem2', 'pesem3', 'pesem4',
             'solidario1', 'solidario2', 'solidario3', 'solidario4', 'solidario5',
@@ -254,6 +254,7 @@ class ColaboradorForm(forms.ModelForm):
         ]
         labels = {
             'name': '¿Cuál es su nombre completo?',
+            'cedula': '¿Cuál es su cedula?',
             'cargo': '¿Cuál es su cargo actual en Coovitel?',
             'años': '¿Cuántos años lleva trabajando en Coovitel?',
             
