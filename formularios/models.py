@@ -48,7 +48,7 @@ class Colaborador(models.Model):
     name = models.CharField(max_length=100)
     cedula = models.IntegerField()
     cargo = models.CharField(max_length=100)
-    años = models.IntegerField()
+    years = models.IntegerField()
     nivelEducativo = models.CharField(max_length=100)
     
     personal1 = models.CharField(max_length=500)
@@ -86,7 +86,7 @@ class Colaborador(models.Model):
 class Dirigente(models.Model):
     name = models.CharField(max_length=100)
     cargo = models.CharField(max_length=100)
-    años = models.IntegerField()
+    years = models.IntegerField()
     nivelEducativo = models.CharField(max_length=100)
     
     personal1 = models.CharField(max_length=500)

@@ -1,0 +1,22 @@
+{% extends "registros.html" %}
+{% load static %}
+
+{% block list %}
+            <h2 class="title-list">Registros Dirigentes</h2>
+            <p class="count">Numero de registros: {{lenDir}}</p>
+            <table class="table">
+                <tr>
+                    <th class="name">Dirigente</th>
+                    <th class="data">Cargo</th>
+                    <th class="data">Años en Coovitel</th>
+                </tr>
+                {% for dirigente in regisDir %}
+                <tr>
+                    <td class="name">{{ dirigente.name }}</td>
+                    <td class="data">{{ dirigente.cargo }}</td>
+                    <td class="data">{{ dirigente.years }}</td>
+                </tr>
+                {% endfor %}
+            </table>        
+            {% include "registros/pagination.html" with page=regisDir %}
+{% endblock list %}

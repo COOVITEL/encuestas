@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="registros">
+        <div class="regis-links">
+            <a class="links" href="{% url 'registrosAsociados' %}">Registros Asociados</a>
+            <a class="links" href="{% url 'registrosColaboradores' %}">Registros Colaboradores</a>
+            <a class="links" href="{% url 'registrosDirigentes' %}">Registros Dirigentes</a>
+            <a class="links" href="{% url 'download' %}">Descargar Registros</a>
+        </div>
+        <div class="lists">
+            {% block list %}
+            
+            {% endblock list %}
+        </div>
+
+    </div>
+{% endblock content %}

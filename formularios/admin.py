@@ -7,8 +7,8 @@ class AsociadoAdmin(admin.ModelAdmin):
 
 @admin.register(Colaborador)
 class ColaboradorAdmin(admin.ModelAdmin):
-    list_display = ['name', 'cargo', 'años']
+    list_display = ['name', 'cargo', 'years']
 
 @admin.register(Dirigente)
 class DirigenteAdmin(admin.ModelAdmin):
-    list_display = ['name', 'cargo', 'años']
+    list_display = ['name', 'cargo', 'years']

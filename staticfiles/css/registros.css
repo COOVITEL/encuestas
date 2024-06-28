@@ -1,0 +1,136 @@
+.registros {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.regis-links {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.links {
+    width: calc(auto + 100px);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+    color: #25306c;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.links:hover {
+    transform: scale(1.05);
+    transition: all .3s ease-in-out;
+    text-shadow: 1px 1px 1px rgb(175, 175, 175);
+}
+
+.links::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0%;
+    left: 50%;
+    background-color: #25306c;
+    bottom: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.links::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0%;
+    left: 50%;
+    background-color: #25306c;
+    bottom: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.links:hover::after {
+    left: 50%;
+    width: 43%;
+    transition: all .3s ease-in-out;
+    
+}
+
+.links:hover::before {
+    width: 45%;
+    left: 5%;
+    transition: all .3s ease-in-out;
+}
+
+.lists {
+    height: 70vh;
+    width: 70vw;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #aaaaaa;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.title-list {
+    color: #25306c;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.count {
+    margin: 4px;
+    font-size: 18px;
+    color: #25306c;
+    font-weight: 500;
+}
+
+.table {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.name {
+    width: 450px;
+    border-bottom: 1px solid #25306c;
+    padding: 2px;
+}
+
+.data {
+    width: 150px;
+    border-bottom: 1px solid #25306c;
+    padding: 2px;
+}
+
+tr:nth-child(even) {
+    background-color: #25306c0e;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #25306c;
+    color: white;
+    padding: 4px 15px;
+    border-radius: 2px 20px 2px 20px;
+    transition: all .4s ease;
+}
+
+.button:hover {
+    border-radius: 20px 2px 20px 2px;
+    transition: all .4s ease;
+}

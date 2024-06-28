@@ -1,0 +1,22 @@
+{% extends "registros.html" %}
+{% load static %}
+
+{% block list %}
+            <h2 class="title-list">Registros Colaboradores</h2>
+            <p class="count">Numero de registros: {{lenCol}}</p>
+            <table class="table">
+                <tr>
+                    <th class="name">Colaborador</th>
+                    <th class="data">Cedula</th>
+                    <th class="data">Cargo</th>
+                </tr>
+                {% for colaborador in regisCol %}
+                <tr>
+                    <td class="name">{{ colaborador.name }}</td>
+                    <td class="data">{{ colaborador.cedula }}</td>
+                    <td class="data">{{ colaborador.cargo }}</td>
+                </tr>
+                {% endfor %}
+            </table>        
+            {% include "registros/pagination.html" with page=regisCol %}
+{% endblock list %}

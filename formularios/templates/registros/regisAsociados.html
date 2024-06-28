@@ -1,0 +1,23 @@
+{% extends "registros.html" %}
+{% load static %}
+
+{% block list %}
+    <h2 class="title-list">Registros Asociados</h2>
+    <p class="count">Numero de registros: {{lenAso}}</p>
+
+    <table class="table">
+        <tr>
+            <th class="name">Asociado</th>
+            <th class="data">Cedula</th>
+            <th class="data">Edad</th>
+        </tr>
+        {% for asociado in regisAso %}
+        <tr>
+            <td class="name">{{ asociado.name }}</td>
+            <td class="data">{{ asociado.cedula }}</td>
+            <td class="data">{{ asociado.edad }}</td>
+        </tr>
+        {% endfor %}
+    </table>        
+    {% include "registros/pagination.html" with page=regisAso %}
+{% endblock list %}

@@ -1,4 +1,4 @@
-#!/home/manurodriguez/coovitel/encuestas/venv/bin/python
+#!/home/dev2coovital/encuestas/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
